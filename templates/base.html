@@ -45,6 +45,16 @@
             color: inherit;
             text-decoration: none;
         }
+        .show-on-small-and-medium {
+            display: none; /* Hide the elements by default */
+          }
+        
+          @media (max-width: 991px) {
+            /* Show the elements on small and medium devices with a maximum width of 991 pixels */
+            .show-on-small-and-medium {
+              display: block;
+            }
+          }
           
         
     </style>
