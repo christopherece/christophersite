@@ -21,6 +21,7 @@ ALLOWED_HOSTS = ['192.168.10.55', '119.224.29.234','localhost','chrisancheta.bal
 # Application definition
 
 INSTALLED_APPS = [
+    'sslserver',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
