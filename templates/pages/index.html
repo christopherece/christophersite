@@ -23,80 +23,27 @@
     <section id="experience" class="section grey lighten-3">
         <div class="container">
             <h3>Experience</h3>
-            <div class="card">
-                <div class="card-content">
-                    <h5>
-                        <img src="{% static 'img/aclogo.png'%}" style="width:100px"><img/>Site Support Specialist - Auckland Council
-                    </h5>
-                    <p>August 2021 - Present</p>
-                    <ul>
-                        <li>Responsible for providing predominately first, second- and third-line end-user computing support and excellent customer service to users at all Council locations.</li>
-                        <li>Handle business-critical IT tasks and system improvements</li>
-                        <li> Installation, configuration and ongoing usability of computer and communication devices, peripheral equipment and software</li>
-                        <li>Microsoft Active Directory user management, groups and policies</li>
-                        <li>Computer management, remote control, software distribution and hardware and software inventory using SCCM.</li>
-                        <li>Serve as the subject matter expert in support Office 365 application.</li>
-                        <li>Log and track user-reported incidents and service request using Service Now.</li>
-                        <li>Collaborate with the central ICT team to ensure alignment with overall IT strategies, standards, and procedures.</li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="card">
-                <div class="card-content">
-                    <h5>
-                        <img src="{% static 'img/newera.png'%}" style="width:100px"><img/>
-                        Desktop/Network Technicain - New Era Technology</h5>
-                    <p>October 2020 - July 2021</p>
-                    <ul>
-                        <li>Provide timely and effective technical support to end-user on various IT-related issues, including hardware, software, network, and peripherals.</li>
-                        <li>Monitoring jobs logged via the helpdesk through Connectwise</li>
-                        <li>Primary point person for any Computer Hardware and software issues arise, mobile devices and phone systems</li>
-                        <li>Assisting and adapting to implementation of new and existing computer network rollouts and upgrades.</li>
-                        <li>School System Management (KAMAR, Print Servers, Inventory)</li>
-                        <li>Windows Server Administration (AD roles and Policy) and Linux Server on prem and offsite</li>
-                        <li>Provide a vital communication link between the client, account manager and team leader. </li>
-                        <li>Troubleshooting Network related issues that may arise to the site</li>
-                    </ul>
-                </div>
-            </div>
+            {% for comp in companies_with_experiences %}
+                    <div class="card">
+                        <div class="card-content">
+                            <h5>
+                                <img src="{{comp.logo_url}}" style="width:100px"><img/>{{comp.name}}
+                            </h5>
+                            <p> {{ comp.hire_date }}- Present</p>
+                            <ul>
+                                {% for experience in comp.experience_set.all %}
+                                <li>
+                                    {{experience.description}}
+                                </li>
+                                {% endfor %}
+                                
+                            </ul>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <div class="card-content">
-                    <h5>
-                        <img src="{% static 'img/smartlogic.png'%}" style="width:100px"><img/>
-                        Field ICT Support Staff - Smartlogic NZ</h5>
-                    <p>August 2019 - October 2020</p>
-                    <ul>
-                        <li>Provide thorough support and problem resolution for client’s inquiries in hardware and software issues for numerous devices and operating systems including Windows, MacOs, iOS and Android devices via phone and remote support</li>
-                        <li>Respond to IT incidents and service requests promptly, adhering to established SLAs and ensuring minimal disruption to field operations.</li>
-                        <li>Network set up, configuration and troubleshooting - Ubiquiti</li>
-                        <li>Performed scheduled monthly maintenance to clients server and workstations, onsite and offsite backup.</li>
-                        <li>Perform routine maintenance, upgrades, and repairs on field hardware, including servers, desktops, laptops, and peripherals.</li>
-                        <li>Medtech 32 support for clinics including installation, server management, updates, network connectivity and contact necessary person</li>
-                        <li>Wed developer using Django, Laravel</li>
-                    </ul>
-                </div>
-            </div>
+           {% endfor %}
 
-            <div class="card">
-                <div class="card-content">
-                    <h5>
-                        <img src="{% static 'img/mmmhmc.jpg'%}" style="width:100px"><img/>
-                        Mariano Marcos Memorial Hospital and Medical Center</h5>
-                    <p>January 2015 - June 2019</p>
-                    <ul>
-                        <li>Managing Hospital Information System (Integrated Hospital Operations Management Program), primary point contact person for any issues. Configure and develop module to cater the needs of the Hospital.</li>
-                        <li>Desktop support activities on windows 7,8,10. laptop, printers, mobile device and peripherals, OS installation and upgrade, windows applications installation, data backup and recovery, desktop assembly and changing damage hardware parts.</li>
-                        <li>Network administration (cabling, router, switch, hub and AP installation and configuration.)</li>
-                        <li>Firewall management using Sophos, pfsense<v/li>
-                        <li>Schedule quarterly preventive maintenance for all computers and peripherals to ensure long life of the equipment</li>
-                        <li>Maintained department inventory and software databases</li>
-                        <li> Developed web applications concerning the department.</li>
-                        <li>Train end user on the proper usage of computer and systems</li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -133,14 +80,11 @@
 
     <section id="skills" class="section grey lighten-3">
         <div class="container">
-            <h3>Skills and Interest</h3>
+            <h3>Skills & Interest</h3>
             <ul class="collection">
-                <li class="collection-item">Programming - HTML, Javascript, Django, LAravel</li>
-                <li class="collection-item">Database - Postgresql, Mysql, MSSQL</li>
-                <li class="collection-item">Windows Server /MS Active Directory and SCCM, Linux Server</li>
-                <li class="collection-item">Operating System - Linux, MacOs, Windows</li>
-                <li class="collection-item">ITIL and Agile Certifies</li>
-                <li class="collection-item">Git, Docker, Proxmox, Ansible</li>
+                {% for skill in skills %}
+                <li class="collection-item">{{skill.name}}</li>
+                {% endfor %}
             </ul>
         </div>
     </section>

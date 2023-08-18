@@ -22,6 +22,9 @@ ALLOWED_HOSTS = ['119.224.29.234','localhost','chrisancheta.balaydalakay.com','c
 
 INSTALLED_APPS = [
     'sslserver',
+    'otherskills.apps.OtherskillsConfig',
+    'skills.apps.SkillsConfig',
+    'companies.apps.CompaniesConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
