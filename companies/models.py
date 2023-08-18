@@ -12,7 +12,7 @@ class Company(models.Model):
     
 
 class Experience(models.Model):
-    company = models.ForeignKey(Company, on_delete=models.DO_NOTHING)
+    company = models.ForeignKey(Company, on_delete=models.CASCADE)
     name = models.CharField(max_length=500, blank=True)
     description = models.TextField()
 
