@@ -30,7 +30,7 @@
                             <h5>
                                 <img src="{{comp.logo.url}}" style="width:100px"><img/>{{comp.name}}
                             </h5>
-                            <p> {{ comp.hire_date }}- Present</p>
+                            <p> {{ comp.hire_date }}- {{ comp.end_date }}</p>
                             <ul>
                                 {% for experience in comp.experience_set.all %}
                                 <li style="justify-content: center;">
