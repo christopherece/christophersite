@@ -68,6 +68,14 @@
 
             <div class="card">
                 <div class="card-content">
+                    <h5>License Electronics Engineer</h5>
+                    <p>Institute of Electronics Engineer of the Philippines</p>
+                    <p>April 2009 - Present</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
                     <img src="{% static 'img/mmsu.png'%}" style="width:100px"><img/>
                     <h5>Mariano MArcos State University - Philippines</h5>
                     <p>BS Electronics and Communications Engineering</p>
@@ -80,7 +88,13 @@
 
     <section id="skills" class="section grey lighten-3">
         <div class="container">
-            <h3>Skills & Interest</h3>
+            <h3>Skills and Interest</h3>
+            <p style="text-align: justify;">
+                Home Lab Enthusiast: Devote personal time to a dynamic home lab environment. I enjoy tinkering with servers, writing code,
+                 and utilizing open-source applications. This combination lets me explore and create within the realm of technology right from the comfort 
+                 of my home.
+            </p>
+            
             <ul class="collection">
                 {% for skill in skills %}
                 <li class="collection-item">{{skill.name}}</li>
@@ -92,18 +106,15 @@
 
     <section id="other">
         <div class="container">
-            <h3>Other Skills and Interest</h3>
-            <!-- <p style="text-align: justify"> 
+            <h3>Showcase Skills and Interest</h3>
+            <p style="text-align: justify"> 
                 My deployment process involves using Proxmox for virtualization, 
                 Ubuntu server as the web server, Docker to containerize the applications, Postgres for the database
                 and Cloudflare for reverse proxy. This approach allows me 
                 to efficiently manage and deploy my web applications, ensuring reliability, scalability, and security.
-            </p> -->
-            <p style="text-align: justify;">
-                Home Lab Enthusiast: Devote personal time to a dynamic home lab environment. I enjoy tinkering with servers, writing code,
-                 and utilizing open-source applications. This combination lets me explore and create within the realm of technology right from the comfort 
-                 of my home.
             </p>
+            <p style="text-align: justify;">
+
             <ul class="collapsible">
                 <li>
                     <div class="collapsible-header">
