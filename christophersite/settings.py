@@ -64,6 +64,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'christophersite.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://info.christopherancheta.co.nz'
+]
+
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
