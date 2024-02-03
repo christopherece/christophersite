@@ -15,13 +15,13 @@ SECRET_KEY = 'django-insecure-^&&ui68lzawx#mdjvbv4v5zfy88_0v6l3_@%1dp_a)-qb-2c7x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.10.200','localhost','chrisancheta.balaydalakay.com','info.christopherancheta.co.nz','balaydalakay.com']
+ALLOWED_HOSTS = ['192.168.10.221','localhost','chrisancheta.balaydalakay.com','info.christopherancheta.co.nz','balaydalakay.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'sslserver',
+    'mssql',
     'otherskills.apps.OtherskillsConfig',
     'skills.apps.SkillsConfig',
     'companies.apps.CompaniesConfig',
@@ -78,13 +78,25 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     },
 
-    'default': {
+    'default1': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'christophersite_tbl',
         'USER': 'postgres',
         'PASSWORD': '!pass1234',
         'HOST':'192.168.10.225'
-    }
+    },
+     'default': {
+        # 'ENGINE': 'sql_server.pyodbc',
+        'ENGINE': 'mssql',
+        'NAME': 'django_db',
+        'USER': 'sa',
+        'PASSWORD': 'L0c@lH0$t@dm!n!@#4',
+        'HOST': '192.168.10.221',
+        'PORT':'1433',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+        }
+    },
 }
 
 
@@ -112,7 +124,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Pacific/Auckland'
 
 USE_I18N = True
 
