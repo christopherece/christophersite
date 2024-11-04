@@ -7,7 +7,7 @@ class Company(models.Model):
     end_date = models.DateField(blank=True, null=True)
     title = models.CharField(max_length=200,blank=True, null=True)
     logo = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)
-
+    arrangement_id = models.IntegerField(null=True, blank=True)
     class Media:
         db_table = 'companies'
 

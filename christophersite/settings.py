@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-^&&ui68lzawx#mdjvbv4v5zfy88_0v6l3_@%1dp_a)-qb-2c7x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.10.221','localhost','chrisancheta.balaydalakay.com','info.christopherancheta.co.nz','balaydalakay.com']
+ALLOWED_HOSTS = ['192.168.10.250','localhost','chrisancheta.balaydalakay.com','info.christopherancheta.co.nz','balaydalakay.com']
 
 
 # Application definition
@@ -73,7 +73,7 @@ CSRF_TRUSTED_ORIGINS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default2': {
+    'default3': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     },
@@ -86,12 +86,11 @@ DATABASES = {
         'HOST':'192.168.10.225'
     },
      'default': {
-        # 'ENGINE': 'sql_server.pyodbc',
         'ENGINE': 'mssql',
         'NAME': 'django_db',
-        'USER': 'sa',
-        'PASSWORD': 'L0c@lH0$t@dm!n!@#4',
-        'HOST': '192.168.10.221',
+        'USER': 'chris',
+        'PASSWORD': 'Nokia5130-c',
+        'HOST': '192.168.10.250',
         'PORT':'1433',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
