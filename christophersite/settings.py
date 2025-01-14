@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-^&&ui68lzawx#mdjvbv4v5zfy88_0v6l3_@%1dp_a)-qb-2c7x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.10.250','localhost','chrisancheta.balaydalakay.com','info.christopherancheta.co.nz','balaydalakay.com']
+ALLOWED_HOSTS = ['192.168.10.250','localhost','christopherancheta.co.nz','info.christopherancheta.co.nz','balaydalakay.com']
 
 
 # Application definition
@@ -65,7 +65,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'christophersite.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://info.christopherancheta.co.nz'
+    'https://info.christopherancheta.co.nz','https://christopherancheta.co.nz'
 ]
 
 
