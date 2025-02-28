@@ -1,71 +1,58 @@
 {% load static %}
 
 <header>
-    <ul style="background-color: #d9d9d9;" id="slide-out" class="sidenav sidenav-fixed">
-      <li>
-        <div class="header">
-          <img src="{% static 'img/chris.jpeg'%}" alt="Profile Image" class="circle-profile-image">
-          <h5 style="text-align: center">Christopher Ancheta</h5>
-        </div>
-      <li><a href="#" class="brand-logo">Profile</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education and Trainings</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#other">Other Skills and Interest</a></li>
-
-      {% comment %} <li>
-        <a href="https://facebook.com/christan0042030" target="_blank" class="social-icon">
-          <img src="{% static 'img/facebook.png'%}" alt="">
-        </a>
-      </li> {% endcomment %}
-
-
-      
-      <li class="show-on-small-and-medium">
-        <a href="https://github.com/christopherece" target="_blank" class="social-icon">
-            <img src="{% static 'img/github.png'%}" alt="">
-        </a>
-      </li>
-      <li class="show-on-small-and-medium">
-        <a href="https://hub.docker.com/u/meztro" target="_blank" class="social-icon">
-            <img src="{% static 'img/docker.png'%}" alt="">
-        </a>
-      </li>
-      <li class="show-on-small-and-medium">
-        <a href="https://www.linkedin.com/in/christopherece/" target="_blank" class="social-icon">
-            <img src="{% static 'img/linkedin.png'%}" alt="">
-        </a>
-      </li>
-      {% comment %} <li><a href="#connect">Connect</a></li> {% endcomment %}
-    </ul>
-    <nav class="blue darken-2">
-      <div class="nav-wrapper">
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <img src="{% static 'img/chris.jpeg'%}" alt="Profile Image" class="circle-profile-image show-on-small hide-on-med-and-up">
-        <ul class="right hide-on-med-and-down">
-          {% comment %} <li>
-            <a href="https://facebook.com/christan0042030" target="_blank" class="social-icon">
-              <img src="{% static 'img/facebook.png'%}" alt="">
-            </a>
-          </li> {% endcomment %}
-    
-          
-          <li>
-            <a href="https://github.com/christopherece" target="_blank" class="social-icon">
-                <img src="{% static 'img/github.png'%}" alt="">
-            </a>
-          </li>
-          <li>
-            <a href="https://hub.docker.com/u/meztro" target="_blank" class="social-icon">
-                <img src="{% static 'img/docker.png'%}" alt="">
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/christopherece/" target="_blank" class="social-icon">
-                <img src="{% static 'img/linkedin.png'%}" alt="">
-            </a>
-          </li>
-        </ul>
+  <ul style="background-color: #d9d9d9;" id="slide-out" class="sidenav sidenav-fixed">
+    <li>
+      <div class="header" style="text-align: center; padding: 20px;">
+        <img src="{% static 'img/chris.jpeg' %}" alt="Profile Image" class="circle-profile-image" style="width: 100px; height: 100px; border-radius: 50%;">
+        <h5>Christopher Ancheta</h5>
+        <p style="margin: 0;">Email: <a href="mailto:info@christopherancheta.co.nz" style="color: #000; text-decoration: none;">info@christopherancheta.co.nz</a></p>
       </div>
-    </nav>
-  </header>
+    </li>
+    <li><a href="#" class="brand-logo">Profile</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education and Trainings</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#other">Other Skills and Interest</a></li>
+
+    <li class="show-on-small-and-medium">
+      <a href="https://github.com/christopherece" target="_blank" class="social-icon">
+        <img src="{% static 'img/github.png' %}" alt="GitHub" style="width: 24px; height: 24px;">
+      </a>
+    </li>
+    <li class="show-on-small-and-medium">
+      <a href="https://hub.docker.com/u/meztro" target="_blank" class="social-icon">
+        <img src="{% static 'img/docker.png' %}" alt="Docker" style="width: 24px; height: 24px;">
+      </a>
+    </li>
+    <li class="show-on-small-and-medium">
+      <a href="https://www.linkedin.com/in/christopherece/" target="_blank" class="social-icon">
+        <img src="{% static 'img/linkedin.png' %}" alt="LinkedIn" style="width: 24px; height: 24px;">
+      </a>
+    </li>
+  </ul>
+
+  <nav class="blue darken-2">
+    <div class="nav-wrapper">
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <img src="{% static 'img/chris.jpeg' %}" alt="Profile Image" class="circle-profile-image show-on-small hide-on-med-and-up" style="width: 40px; height: 40px; border-radius: 50%;">
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="https://github.com/christopherece" target="_blank" class="social-icon">
+            <img src="{% static 'img/github.png' %}" alt="GitHub" style="width: 24px; height: 24px;">
+          </a>
+        </li>
+        <li>
+          <a href="https://hub.docker.com/u/meztro" target="_blank" class="social-icon">
+            <img src="{% static 'img/docker.png' %}" alt="Docker" style="width: 24px; height: 24px;">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/christopherece/" target="_blank" class="social-icon">
+            <img src="{% static 'img/linkedin.png' %}" alt="LinkedIn" style="width: 24px; height: 24px;">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
